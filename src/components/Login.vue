@@ -67,6 +67,7 @@ export default {
             this.$message.success('登录成功！')
             //保存token至sessionstorage,页面跳转
             window.sessionStorage.setItem('token', res.data.data.token)
+            window.sessionStorage.setItem('username', res.data.data.username)
             this.$router.push('/home')
           }
         }
